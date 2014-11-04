@@ -3,7 +3,27 @@ var makeDotty = function(top, left, timeBetweenSteps){
   makeDancer.call(this, top, left, timeBetweenSteps);
   this.$node.removeClass("dancer");
   this.$node.addClass("dotty");
+  var thisClass = "dotty";
+  this.$node.mouseenter(function(event)
+    {
+        //var thisClass = $(this).attr("class");
+        //console.log($(this));
+        //console.log(this.className);
+        $(this).removeClass(this.className);
+        //console.log($(this));
 
+        $(this).addClass("kitty");
+
+
+
+
+    }).mouseleave(function(event)
+    {
+        //event.stopPropagation()
+        $(this).addClass("dotty");
+        $(this).removeClass("kitty");
+
+    })
 };
 
 makeDotty.prototype = Object.create(makeDancer.prototype);

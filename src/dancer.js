@@ -23,7 +23,7 @@ var makeDancer = function(top, left, timeBetweenSteps) {
     }).mouseleave(function(event)
     {
         //event.stopPropagation()
-        $(this).addClass(thisClass);
+        $(this).addClass("dancer");
         $(this).removeClass("kitty");
 
     })
