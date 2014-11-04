@@ -43,5 +43,19 @@ body, a:link, a:visited, a:active{
   background-repeat: no-repeat;
   background-size: 150px 150px;
   position: absolute;
-
 }
+
+.dotty{
+  height: 150px;
+  width: 150px;
+  background-image: url("./spottiedottie1_09955.gif");
+  background-repeat: no-repeat;
+  background-size: 150px 150px;
+  position: absolute;
+}
+
+:/*active{
+  height: 300px;
+  width: 300px;
+};
+*/
