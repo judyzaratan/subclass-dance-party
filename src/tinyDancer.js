@@ -1,7 +1,8 @@
 var makeTinyDancer = function(top, left, timeBetweenSteps){
   makeDancer.call(this, top, left, timeBetweenSteps);
-  this.$node = $('<span class="tiny"></span>');
-  //this.$node.className = "tiny";
+  //this.$node = $('<span class="tiny"></span>');
+  this.$node.removeClass("dancer");
+  this.$node.addClass("tiny");
   //this.settings = {'border': 5px solid blue, 'border-radius': 5px};
   //this.border-radius =
   //this.$node.css(this.settings);

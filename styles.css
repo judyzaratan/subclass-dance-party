@@ -5,6 +5,10 @@ body{
   margin: 0px;
   background-color:#444;
   font-size: 18px;
+  background-image: url("./hello.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  /*position: absolute;*/
 }
 body, a:link, a:visited, a:active{
   color: lightblue;
@@ -33,5 +37,11 @@ body, a:link, a:visited, a:active{
 }
 
 .kitty{
+  height: 150px;
+  width: 150px;
+  background-image: url("./src/kittyDancer.gif");
+  background-repeat: no-repeat;
+  background-size: 150px 150px;
+  position: absolute;
 
 }
