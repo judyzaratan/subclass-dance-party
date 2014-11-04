@@ -30,5 +30,17 @@ $(document).ready(function(){
     window.dancers.push(dancer);
     $('body').append(dancer.$node);
   });
+
+  $(".lineUpButton").on("click", function(event) {
+    for (var i = 0; i < window.dancers.length; i++) {
+      window.dancers[i].lineUp();
+    }
+  });
+
+  $(".dancer").on("mouseover", function(event) {
+    console.log('test');
+    $el.css("border", "30px solid blue");
+    $el.css("border-radius", "30px");
+  });
 });
 
