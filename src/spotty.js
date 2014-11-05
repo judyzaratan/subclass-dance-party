@@ -4,31 +4,45 @@ var makeDotty = function(top, left, timeBetweenSteps){
   this.$node.removeClass("dancer");
   this.$node.addClass("dotty");
   var thisClass = "dotty";
-  this.$node.mouseenter(function(event)
-    {
-        //var thisClass = $(this).attr("class");
-        //console.log($(this));
-        //console.log(this.className);
-        $(this).removeClass(this.className);
-        //console.log($(this));
 
-        $(this).addClass("kitty");
+  // this.$node.mouseenter(function(event)
+  //   {
+  //       //var thisClass = $(this).attr("class");
+  //       //console.log($(this));
+  //       //console.log(this.className);
+  //       $(this).removeClass(this.className);
+  //       //console.log($(this));
 
+  //       $(this).addClass("kitty");
+  //   }).mouseleave(function(event)
+  //   {
+  //       //event.stopPropagation()
+  //       $(this).addClass("dotty");
+  //       $(this).removeClass("kitty");
 
-
-
-    }).mouseleave(function(event)
-    {
-        //event.stopPropagation()
-        $(this).addClass("dotty");
-        $(this).removeClass("kitty");
-
-    })
+  //   })
 };
 
 makeDotty.prototype = Object.create(makeDancer.prototype);
 
 makeDotty.prototype.constructor = makeDotty;
+
+makeDotty.prototype.kitmorph = function() {
+  this.$node.mouseenter(function(event)
+  {
+      //var thisClass = $(this).attr("class");
+      //console.log($(this));
+      //console.log(this.className);
+      $(this).removeClass("dotty");
+      //console.log($(this));
+      $(this).addClass("kitty");
+  }).mouseleave(function(event)
+  {
+      //event.stopPropagation()
+      $(this).addClass("dotty");
+      $(this).removeClass("kitty");
+  })
+};
 
 makeDotty.prototype.step = function() {
   // call the old version of step at the beginning of any call to this new version of step

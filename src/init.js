@@ -37,10 +37,10 @@ $(document).ready(function(){
     }
   });
 
-  $(".dancer").on("mouseover", function(event) {
-    console.log('test');
-    $el.css("border", "30px solid blue");
-    $el.css("border-radius", "30px");
-  });
+  // $(".dancer").on("mouseover", function(event) {
+  //   console.log('test');
+  //   $el.css("border", "30px solid blue");
+  //   $el.css("border-radius", "30px");
+  // });
 });
 

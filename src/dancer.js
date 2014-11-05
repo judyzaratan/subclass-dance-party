@@ -6,27 +6,45 @@ var makeDancer = function(top, left, timeBetweenSteps) {
   this.timeBetweenSteps = timeBetweenSteps;
   this.step();
   this.setPosition(top, left);
-  var thisClass = "dancer";
+  this.kitmorph();
+  // var thisClass = "dancer";
+  // this.$node.mouseenter(function(event)
+  //   {
+  //       //var thisClass = $(this).attr("class");
+  //       //console.log($(this));
+  //       //console.log(this.className);
+  //       $(this).removeClass(this.className);
+  //       //console.log($(this));
+
+  //       $(this).addClass("kitty");
+
+
+
+
+  //   }).mouseleave(function(event)
+  //   {
+  //       //event.stopPropagation()
+  //       $(this).addClass("dancer");
+  //       $(this).removeClass("kitty");
+
+    //})
+};
+
+makeDancer.prototype.kitmorph = function() {
   this.$node.mouseenter(function(event)
-    {
-        //var thisClass = $(this).attr("class");
-        //console.log($(this));
-        //console.log(this.className);
-        $(this).removeClass(this.className);
-        //console.log($(this));
-
-        $(this).addClass("kitty");
-
-
-
-
-    }).mouseleave(function(event)
-    {
-        //event.stopPropagation()
-        $(this).addClass("dancer");
-        $(this).removeClass("kitty");
-
-    })
+  {
+      //var thisClass = $(this).attr("class");
+      //console.log($(this));
+      //console.log(this.className);
+      $(this).removeClass("dancer");
+      //console.log($(this));
+      $(this).addClass("kitty");
+  }).mouseleave(function(event)
+  {
+      //event.stopPropagation()
+      $(this).addClass("dancer");
+      $(this).removeClass("kitty");
+  })
 };
 
 
